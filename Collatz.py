@@ -110,7 +110,7 @@ plt.ylabel("Standard Deviation")
 plt.plot(s)
 plt.show()
 
-# Observation: The sum of the maximums, means, variances, and stand deviations are increasing functions.
+# Observation: The sum of the maximums, means, variances, and stand deviations appear to be increasing functions.
 
 # Create DataFrame that encompasses the previous data, print it to the console, and save it to a file.
 df = pd.DataFrame({"S": S, "mu": mu, "v": v, "s": s}, index=np.arange(1, len(S) + 1, 1))

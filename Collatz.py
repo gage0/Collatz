@@ -24,7 +24,7 @@ for n in range(1, M + 1):
             n = 3 * n + 1
             n = int(n)
         i = i + 1
-    S.append(i)
+    S.append(i+1)
 
 # Print data.
 # print('S=', S) #Stopping times. For large M it is not always a good idea to print out S.

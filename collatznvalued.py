@@ -5,18 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from treelib import Node, Tree
 
-graph=defaultdict(list)
-
-def addEdge(graph, u, v):
-    graph[u].append(v)
-
-def generate_edges(graph):
-    edges=[]
-    for node in graph:
-        for neighbor in graph[node]:
-            edges.append((node, neighbor))
-    return edges
-
 S = []
 fn={}
 N=[]
@@ -44,20 +32,3 @@ sn={}
 for n in fn:
     sn[n]=len(fn[n])
 print('sn=', sn)
-
-for i in range(len(fn)):
-    if fn[n]==n:
-        print(addEdge(fn, fn[n], n))
-
-print(generate_edges(fn))
-
-#Generate graph edges DataFrame.
-index=pd.MultiIndex.from_tuples(generate_edges(fn))
-df=pd.MultiIndex.from_tuples(generate_edges(fn))
-df=pd.DataFrame(generate_edges(fn), index=index)
-print(df)
-    
-G=nx.Graph()
-G=nx.from_pandas_edgelist(df, 0, 1)
-nx.draw_shell(G, with_labels=True)
-plt.show()

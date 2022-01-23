@@ -80,7 +80,7 @@ for j in range(len(S)):
 
 # Create maximum DataFrame and plot the successive maximums.
 df_maximum = pd.DataFrame(maximum, columns=["maximum"])
-plt.title("Sum of Maximums of Stopping Times vs. Mean")
+plt.title("Sum of Maximums of Stopping Times vs. Maximum")
 plt.xlabel("Sum of Maximums of Stopping Times")
 plt.ylabel("Maximum")
 plt.plot(maximum)
@@ -96,7 +96,7 @@ plt.show()
 
 # Create variance DataFrame and plot the successive variances.
 df_v = pd.DataFrame(v, columns=["v"])
-plt.title("Sum of Variances of Stopping Times vs. Stopping Times")
+plt.title("Sum of Variances of Stopping Times vs. Variance")
 plt.xlabel("Sum of Variances of Stopping Times")
 plt.ylabel("Variance")
 plt.plot(v)
@@ -115,4 +115,4 @@ plt.show()
 # Create DataFrame that encompasses the previous data, print it to the console, and save it to a file.
 df = pd.DataFrame({"S": S, "mu": mu, "v": v, "s": s}, index=np.arange(1, len(S) + 1, 1))
 print(df)
-df.to_csv("Collatz1.csv")
+df.to_csv("Collatz.csv")
